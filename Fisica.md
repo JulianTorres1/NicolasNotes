@@ -1,1 +1,0 @@
-hola esto es una nota de fisica mac
