@@ -1,0 +1,3 @@
+  
+
+hola buenas, les escribo esto porque la especialidad de mi caso. Me dijeron que esperara hasta mayo para que reflejara el pago de la matrícula o así. La cuestión es que no me quedo muy claro en general mi situación y pues no sé cuáles materias si puedo dar y cuáles no. Aparte tampoco puedo entrar a la plataforma SIMA, ya que oficialmente no estoy matriculado. Entonces es bastante mi preocupación por quedarme atrasado. Por favor ayúdenme a solucionar esta situación. Gracias.
