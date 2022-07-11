@@ -25,4 +25,46 @@ a diferencia de las colas normales la colas con prioridades son un tipo de cola 
 
 Respuesta:
 
-Cuando hacemos una cola basada en el comportamiento LIFO, en realidad estamos haciendo una pila ya que el comportamiento de Last Input First Output, por lo que no tendria mucho sentido.
+en estructurtura de datos cuando empleamos una cola pero mas concretamente una cola que emplea la estructura de LIFO o el primero en entrar es el primero en salir, pero para ejemplificar este tipo de estructura de datos el ejemplo mas eficas es el de la pila de los platos, cuando tenemos una pila de platos y le agregamos otro mas lo logico es poner el plato a integrar en la parte de arriba por lo que cuando tengamos que sacar nuestro plato siempre sacaremos el ultimo que allamos puesto, y esto es igual en java por lo que cuando sacamos un elemento de nuestra cola tipo LIFO siempre sacaremos el ultimo que ingresamos.
+
+![[Pasted image 20220711150542.png]]
+
+#### 6. Explique gráfica y textualmente  que es una cola con comportamiento FIFO
+
+en las colas tipo FIFO pasa lo contrario a las colas tipo LIFO como era de esperar. en las colas tipo FIFO su conportamiento se basa en que el primero en entrar es el primero en salir porlo que en java cuando tenemos una cola con varios elemento y ingresamos uno tendremos que sacar a todos los elemento que esten por delante de este para que el que ingresamos pueda salir. otro ejemplo muy acertado es el de la cola de un banco. cuando llegamos al banco hay dos posibles situaciones: la primera y la menos habitual y es que la cola del banco este vacia y en ese caso seriamos la primera persona en entrar asi que seriamos la primera en salir, o la segunda situacion y que ya alla una cola de personas previas a nuestra llegada por lo que para ser atendido debemos espera a que las demas personas salgan de la cola
+
+![[Pasted image 20220711151606.png]]
+
+
+#### 7.  1.  Explique textual y gráficamente cual es el algoritmo o proceso para contar contar los elementos de una Cola, desde el primero que entra (la Cabeza) hasta el último que entra (el final). Hacer el ejemplo en Java.
+
+Respuesta:
+
+para poder obtener el tamaño de una cola en java es tan simple como tener un objeto tipo cola instanciado previamente ya se sea que este tenga cero o varios elementos, para poder obtener el tamaño recurimos a un metodo de java.util este es: .size(); este metodo nos devuelve cuantos elemento tiene nuestra cola. tan simple como el siguente ejemplo:
+
+```
+package com.mycompany.trabajo3unidad3;  
+  
+import java.util.LinkedList;  
+import java.util.Queue;  
+  
+public class queuelist {  
+    public static void main(String[] args) {  
+        System.out.println("ok ok");  
+  
+        Queue<String> cola = new LinkedList<>();  
+  
+        cola.add("Nicolas");  
+        cola.add("Edwin");  
+        cola.add("jonny");  
+  
+        System.out.println("Contenido De la Cola: " +cola);  
+  
+        int colaSize = cola.size();  
+  
+        System.out.printf("Tamaño de la cola: " + colaSize);  
+    }  
+}
+
+```
+
