@@ -36,7 +36,7 @@ en las colas tipo FIFO pasa lo contrario a las colas tipo LIFO como era de esper
 ![[Pasted image 20220711151606.png]]
 
 
-#### 7.  1.  Explique textual y gráficamente cual es el algoritmo o proceso para contar contar los elementos de una Cola, desde el primero que entra (la Cabeza) hasta el último que entra (el final). Hacer el ejemplo en Java.
+#### 7. Explique textual y gráficamente cual es el algoritmo o proceso para contar contar los elementos de una Cola, desde el primero que entra (la Cabeza) hasta el último que entra (el final). Hacer el ejemplo en Java.
 
 Respuesta:
 
@@ -68,3 +68,118 @@ public class queuelist {
 
 ```
 
+#### 8. Explique textual y gráficamente cual es el algoritmo o proceso para saber si una Cola  está vacía o no. Hacer un ejemplo en Java.
+
+hay muchas maneras de hacer lo pero una de las mas sensillas es utilizando el metodo .size, este nos devuelve el numero de elementos que tengamos dentro de nuestra cola. por lo que haciendo una comparacion booleana en un if podemos determinar si este se encuentra vacio o no: como podemos ver en el siguente ejemplo:
+
+```
+if (cola.size() == 0) {  
+    System.out.println("La cola esta vacia");  
+} else {  
+    nuemeroDeElementos = cola.size();  
+    System.out.println("La cola No! esta vacia con un " + nuemeroDeElementos + " elementos");  
+}
+```
+
+de esta manera si la cantidad de elementos es 0 el arreglo esta vacio pero por otro lado si no es 0 este no esta vacio.
+
+#### 9. Explique textual y gráficamente cual es el algoritmo o proceso para buscar un elemento en una Cola. Hacer un ejemplo en Java.
+
+para buscar un elemento dentro dentro de nuestra cola empleamos el el metodo predefinido .contains() este metodo recore todos los nodos de nuestra cola comparando si el elemeto que le pasamos por parametro coninside con el que esta buscando. si lo que estamos buscando coincide este devuelve la ubicacion del mismo en la coleccion y si no nos devuelve un numero negativo. asi como podemos ver en este ejemplo que nos devuelve un mensaje indicandonos si encontro lo que estabamos buscando:
+
+```
+System.out.println("dijite el elemento a buscar: ");  
+String busqueda = sc.next();  
+if (cola.contains(busqueda)) {  
+    System.out.println("Objeto " + busqueda + " encontrado");  
+}else {  
+    System.out.println("Objeto No encontrado :C");  
+}
+```
+
+
+#### 10.  Explique textual y gráficamente cual es el algoritmo o proceso para agregar un elemento a una Cola. Hacer un ejemplo en Java.
+
+para agregar elementos a una cola en java de tipo Queue emplemos el metodo que el jdk de java nos ofrece, el metodo .add() este metodo ingresa el valor que le pasemos a nuestra pila o cola. como vermos en el siguente ejemplo:
+
+```
+// Primero Creamos nuestro objeto cola que a su ves es una cola tipo Queue  
+Queue<String> cola = new LinkedList<String>();  
+
+// añadimos nuestros elemetos haciendo uso de .add(); 
+cola.add("Nicolas");  
+cola.add("jonny");  
+cola.add("Edwin");
+```
+   
+#### 11. Explique textual y gráficamente cual es el algoritmo o proceso para sacar el próximo  elemento en una Cola. Hacer un ejemplo en Java.
+
+para poder sacar un elemento de una cola en java, primero hay que en tener el principio FiFO de primero en entrar, primero en salir, esto es impresindible ya que de otro modo no lograriamos saber que elemento sacariamos, con esto claro para sacar un elemento de una cola en java empleamos el metodo .remove() que sacara como ya dijimos antes el ultimo elemento en la cola. como podemos ver en este ejemplo:
+
+```
+
+Queue<String> cola = new LinkedList<String>();  
+
+// añadimos nuestro elemetos a eliminar:
+
+cola.add("Nicolas");  
+
+cola.remove(); // x3
+```
+
+#### 12. Explique textual y gráficamente cual es el algoritmo o proceso para obtener la posición de un elemento en una Cola. Hacer un ejemplo en Java.
+
+Esta parte del algoritmo primero le pedimos al usuario que ingrese el contenido del elemento a buscar su indice. luego de esto hacemos un ciclo for que en cada ciclo ejecute un if  que recorra elemento por elemento y compare si el contenido que le brindo el usuario se coresponde por el que esta recorriendo en ese momento, y si no se corresponde expresarselo al usuario. como podemos ver en el siguente ejemplo:
+
+```
+System.out.println("ingrese el Contenido a encontrar su indice");  
+String content = sc.next();  
+  
+for (int i = 0; i < cola.size(); i++) {  
+    if (((LinkedList<String>) cola).get(i).contains(content)) {  
+        System.out.println("El elemento " + content + " equivale al indice " + i);  
+    }else {  
+        System.out.println("el elemento no exite dentro de la cola");  
+    }
+```
+
+
+#### 13. Explique textual y gráficamente cual es el algoritmo o proceso para obtener un elemento en la posición X  de  una Cola. Hacer un ejemplo en Java.
+
+para buscar un elemento en espesifico en nuestra cola divimos el proceso en dos partes dentro de nuestro codigo:
+	1. Parte #1: primero tenemos la parte de la recolecion del indice del elemento que queremos buscar para esto es bastante conveniente de cara al usuario mostrarle que indices estan disponibles dentro de nuestra cola, para eso hicimos uso de un ciclo for que recorre todos lo elementos de nuestra cola y les asigna un indice para que el usuario vea los indices que estan disponibles. luego mediante de el metodo Scaner el usuario indica un indice, el cual es el que nuestro progrma va a buscar.
+	2. La Busqueda: Luego de obtener el indice obtenemos el contenido de nuestra cola mediante el metodo  .get(); que nos ofrece la clase del jdk LinkedList ya este nos devuelve el contenido de el indice al que apuntamos. y por ultimo se lo mostramos al usuario.
+
+como podemos ver en el siguente ejemplo:
+
+```
+System.out.printf("Dijite  la posicion de elemento a Buscar\n");  
+for (int i = 0; i < cola.size(); i++) {  
+    System.out.println("Indices disponibles " + i);  
+}  
+  
+int index = sc.nextInt();  
+String elementoIndex = ((LinkedList<String>) cola).get(index);  
+System.out.println("el elemento en el indice "+ index + " es " + elementoIndex);
+```
+
+#### 14. Explique textual y gráficamente cual es el algoritmo o proceso para eliminar un elemento cualquiera de una Cola. Hacer un ejemplo en Java.
+
+para llevar a cabo al eliminacion de un componente que no se el de la cabeza de la cola, que normalmente seria lo mas comun, pero si nececitamos remover un elemento que no esta proximo a su salida podemos hacer uso del metodo .remove() pasandole el indice o el el contenido de nuestro elemento a eliminar: tal y como veremos en el siguente ejemplo:
+
+```
+System.out.println("dispone de los siguientes elementos: " + cola);  
+System.out.println("Ingrese el Contenido del elemento a eliminar:");  
+  
+String Contenido = sc.next();  
+cola.remove(Contenido);  
+System.out.println("Resultado: " + cola);
+```
+
+#### 15. Explique textual y gráficamente cual es el algoritmo o proceso para agregar varios elementos a una Cola, es decir, agregar una subCola en otra Cola. Hacer un ejemplo en Java.
+
+
+
+#### 16. Explique textual y gráficamente cual es el algoritmo o proceso para eliminar varios elementos consecutivos o secuenciales de cualquier parte de la Cola, es decir, eliminar una subCola en otra Cola, per que no sea del final de la cola. Hacer un ejemplo en Java.
+
+#### 17.  Explique textual y gráficamente cual es el algoritmo o proceso para borrar todos los elementos de una Cola, es decir, vaciar una Cola. Hacer un ejemplo en Java.
