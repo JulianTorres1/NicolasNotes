@@ -183,3 +183,46 @@ System.out.println("Resultado: " + cola);
 #### 16. Explique textual y gráficamente cual es el algoritmo o proceso para eliminar varios elementos consecutivos o secuenciales de cualquier parte de la Cola, es decir, eliminar una subCola en otra Cola, per que no sea del final de la cola. Hacer un ejemplo en Java.
 
 #### 17.  Explique textual y gráficamente cual es el algoritmo o proceso para borrar todos los elementos de una Cola, es decir, vaciar una Cola. Hacer un ejemplo en Java.
+
+
+
+
+# Pilas:
+
+1.  Explique textual y gráficamente que es un una Pila, y cuales son las clases ofrece el SDK de Java para trabajar con Pilas:
+
+una pila es un tipo de estructura de dato que principalmente tiene  dos tipos de operaciones la de apilar o desapilar o tambien conocidos como push and pop, las pilas son un tipo de estructura de dato que se basa en el principio de LIFO o del inglés Last In First Out, último en entrar, primero en salir. debido a este principio se diferencia de las colas. un ejemplo practico que se usa al momento de explicar las colas es el de la pila de platos y es que en si una pila de platos trabaja de la misma forma que una pila, de manera que para poner un plato seria un push y para sacar un plato un pop.
+el JDK de java nos ofrece una serie herramientas para trabajar con las pilas, principalmente la clase Stack que nos permite crear diferentes objetos de esta, ofreciendonos tambien algunos metodos para trabajar con las colas como:
+
+- 
+
+    
+2.  Explique por qué las pilas se consideran elementos fundamentales en las estructuras de datos.
+    
+3.  Explique textual y gráficamente  cual es el algoritmo o proceso para contar los elementos de una Pila, desde el primero hasta el último. Hacer un ejemplo en Java
+    
+4.  Explique textual y gráficamente  cual es el algoritmo o proceso para saber si una Pila está vacía o no. Hacer un ejemplo en Java
+    
+5.  Explique textual y gráficamente cual es el algoritmo o proceso para recordar o mostrar los elementos de una Pila, desde el primero hasta el último. Hacer un ejemplo en Java
+    
+6.  Explique textual y gráficamente cual es el algoritmo o proceso para recorrer o mostrar los elementos de una Pila, desde el último hasta el primero. Hacer un ejemplo en Java
+    
+7.  Explique textual y gráficamente cual es el algoritmo o proceso para agregar un elemento a una Pila. Hacer un ejemplo en Java
+    
+8.  Explique textual y gráficamente cual es el algoritmo o proceso para insertar un elemento a una Pila. Hacer un ejemplo en Java
+    
+9.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar el primer elemento de una pila. Hacer un ejemplo en Java
+    
+10.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar el último elemento de una pila. Hacer un ejemplo en Java
+    
+11.  Explique textual y gráficamente cual es el algoritmo o proceso para buscar un elemento de una pila. Hacer un ejemplo en Java
+    
+12.  Explique textual y gráficamente cual es el algoritmo o proceso para agregar varios elementos consecutivos o secuenciales en cualquier posición de la Pila. Hacer un ejemplo en Java
+    
+13.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar varios elementos consecutivos o secuenciales en cualquier posición de la Pila. Hacer un ejemplo en Java
+    
+14.  Explique textual y gráficamente cual es el algoritmo o proceso para obtener la posición de un elemento  de la Pila. Hacer un ejemplo en Java
+    
+15.  Explique textual y gráficamente cual es el algoritmo o proceso para obtener un elemento a partir de una posición específica de la Pila. Hacer un ejemplo en Java
+    
+16.  Explique textual y gráficamente cual es el algoritmo o proceso para Eliminar todos los elementos (vaciar) de una Pila. Hacer un ejemplo en Java
