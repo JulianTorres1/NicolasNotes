@@ -178,7 +178,7 @@ System.out.println("Resultado: " + cola);
 
 #### 15. Explique textual y gráficamente cual es el algoritmo o proceso para agregar varios elementos a una Cola, es decir, agregar una subCola en otra Cola. Hacer un ejemplo en Java.
 
-
+System.out.println(pila.pop());
 
 #### 16. Explique textual y gráficamente cual es el algoritmo o proceso para eliminar varios elementos consecutivos o secuenciales de cualquier parte de la Cola, es decir, eliminar una subCola en otra Cola, per que no sea del final de la cola. Hacer un ejemplo en Java.
 
@@ -194,26 +194,93 @@ System.out.println("Resultado: " + cola);
 una pila es un tipo de estructura de dato que principalmente tiene  dos tipos de operaciones la de apilar o desapilar o tambien conocidos como push and pop, las pilas son un tipo de estructura de dato que se basa en el principio de LIFO o del inglés Last In First Out, último en entrar, primero en salir. debido a este principio se diferencia de las colas. un ejemplo practico que se usa al momento de explicar las colas es el de la pila de platos y es que en si una pila de platos trabaja de la misma forma que una pila, de manera que para poner un plato seria un push y para sacar un plato un pop.
 el JDK de java nos ofrece una serie herramientas para trabajar con las pilas, principalmente la clase Stack que nos permite crear diferentes objetos de esta, ofreciendonos tambien algunos metodos para trabajar con las colas como:
 
-- 
+- Push
+- Pop
+- Peak
+- Empty
+
+![[Pasted image 20220715122245.png]]
+
 
     
 2.  Explique por qué las pilas se consideran elementos fundamentales en las estructuras de datos.
+
+Las pilas en la programacion en java son una herramienta fundamental ya que estas nos permiten los siguentes beneficios: una optimizacion mucho mayor con difererentes tipos de datos, organizar de una manera estandar y mucho mas consistente colecciones de datos, una cantidad inmenza de herramientas con la que trabajar las mismas.
+
     
 3.  Explique textual y gráficamente  cual es el algoritmo o proceso para contar los elementos de una Pila, desde el primero hasta el último. Hacer un ejemplo en Java
+
+Una de las diversas masneras que existen para contar los elementos de una pila, una de ellas es la siguente: primero cramos una variable donde guardemos la cantidad total de elementos que nuestro algoritmo va a contar, luego de eso creamos un ciclo for que se ejecute dependiendo el tamaño de elementos que conteng nuestra pila, y dentro del ciclo for solo nos queda imprimir que elementos se estan contando (por simple decoracion) y ir guardando los elementos dentro de la variable cantidad, para luego mostrarselos al usuario. tal y como podemos ver en el siguente ejemplo: 
+
+```
+int cantidad = 0;  
+for (int i = 0; i < pila.size(); i++) {  
+    System.out.println("Contando Elemento: " + i);  
+    cantidad++;  
+}  
+System.out.println("cantidad total de elementos: " + cantidad);
+```
+
+4.  Explique textual y gráficamente  cual es el algoritmo o proceso para saber si una Pila está vacía o no. Hacer un ejemplo en Java:
+
+para esta parte del algorimo simplemente nececitamos hacar una comprobacion con un If de manera que si pila.size() nos devuelve un valor superior a 0 significa que la pila no esta vacia pero por otro lado si la condicion no se cumple significa que la pila esta vacia tan simple como el siguente ejemplo:
+
+```
+if (pila.size() != 0) {  
+    System.out.println("la Pila NO! esta vacia.");  
+}else {  
+    System.out.println("Pila esta vacia");  
+}
+```
+
     
-4.  Explique textual y gráficamente  cual es el algoritmo o proceso para saber si una Pila está vacía o no. Hacer un ejemplo en Java
-    
-5.  Explique textual y gráficamente cual es el algoritmo o proceso para recordar o mostrar los elementos de una Pila, desde el primero hasta el último. Hacer un ejemplo en Java
+5.  Explique textual y gráficamente cual es el algoritmo o proceso para recordar o mostrar los elementos de una Pila, desde el primero hasta el último. Hacer un ejemplo en Java:
+
+para mostrar los elemento de una solo nececitamos imprimirla por pantalla:
+
+```
+System.out.println("Contenido de la Pila: " + pila);
+```
     
 6.  Explique textual y gráficamente cual es el algoritmo o proceso para recorrer o mostrar los elementos de una Pila, desde el último hasta el primero. Hacer un ejemplo en Java
     
 7.  Explique textual y gráficamente cual es el algoritmo o proceso para agregar un elemento a una Pila. Hacer un ejemplo en Java
+
+para agregar un elemento en la pila debemos llamar al metodo que nos ofrece la clase stack, el metodo .push() este metod recibe un valor Item que es cualquier tipo de datos que le querramos pasara la pila y esta lo agrege. como en el siguente ejemplo:
+
+```
+System.out.println("Ingrese texto a ingresar en la pila: ");  
+pila.push(sc.next());  
+// o individualmente  
+pila.push("cadena de texto a ingresar en la pila");  
+pila.push(10);
+```
+
     
 8.  Explique textual y gráficamente cual es el algoritmo o proceso para insertar un elemento a una Pila. Hacer un ejemplo en Java
     
-9.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar el primer elemento de una pila. Hacer un ejemplo en Java
+9.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar el primer elemento de una pila. Hacer un ejemplo en Java:
+
+para esta ocacion vamos a hacer uso de los indices de nuestra pila y que queremos eliminar el primer elemento de esta por lo que, lo primero que vamos a hacer es comprobar que la pila esta vacia ya que de lo contrario esta nos generaria un error devido a que no tiene elementos que eliminar lo cuan se podriva evitar con una excepcion on en java un try. luego de comprobar que nuestra pila no esta vacia vamos a eliminar el primer elemento de esta que siempre seria el elemento con index #0 y para eso hacemos uso las herramientas de la clase Stacks que en este caso para eliminar un elemento seria el metodo .remove(); al cual le pasamos el indice de nuestro elemento, luego lo eliminamos y se lo mostramos al usuario de una manera sensilla. como podemos ver en este ejemplo:
+
+```
+if (pila.isEmpty()  == false) {  
+    System.out.println("Eliminado Primer elemento: " + pila.get(0));  
+    pila.remove(0);  
+    System.out.println("Estado de la pila: " + pila);  
+}else {  
+    System.out.println("pila true");  
+}
+```
+
     
-10.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar el último elemento de una pila. Hacer un ejemplo en Java
+10.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar el último elemento de una pila. Hacer un ejemplo en Java:
+
+para eliminar el ultimo elemento en la pila debemos hacer lo que se conoce comunmente como pop cuando trabajamos con pilas. para eso debemos llamar al metodo que nos brinda la clase Stack. .pop()
+
+```
+System.out.println(pila.pop());
+```
     
 11.  Explique textual y gráficamente cual es el algoritmo o proceso para buscar un elemento de una pila. Hacer un ejemplo en Java
     
