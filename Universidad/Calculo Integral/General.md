@@ -31,3 +31,11 @@ El **dominio** el grupo de valores que puede adquirir la variable independiente.
 El **codominio** son los valores que resultan de cambiar el valor de la variable independiente en la función.  
 El **rango** es el conjunto de valores en el que tenemos interés.
 
+## Lista De Tareas para el Tercer Trabajo:
+
+- [] saber resolver integrales con raizes
+- [] saber aplicar el metodo de sustitucion
+- [] saber resolver una integral desarrollando el pirmero integrando
+- [] saber realizar integrales definidas
+- [] calcular el area limitada de una funcion
+- [] aplicar los metodos de integracion

@@ -182,7 +182,55 @@ System.out.println(pila.pop());
 
 #### 16. Explique textual y gráficamente cual es el algoritmo o proceso para eliminar varios elementos consecutivos o secuenciales de cualquier parte de la Cola, es decir, eliminar una subCola en otra Cola, per que no sea del final de la cola. Hacer un ejemplo en Java.
 
+para esta parte del algoritmo vamos a dividirlo en dos caminos, uno es la de eliminar elementos segun cuantos querramos eliminar y eliminar elementos segun el contenido. para la primera parte solo nececitamos pedirle a usuario cuantos elementos va a eliminar con la clase scaner, luego de esto debemos hacer un ciclo for que tome en cuenta la cantidad de elementos a eliminar luego eliminar el siguente elemento en la cola gracias al metodo cola.remove();.
+para la proxima opcion es eliminar elementos en base al contenido, para esto le solicitamos al usuario cuantos elementos va a eliminar y luego hacemos un for que por cada elemento a eliminar pregunte el contenido del elemento a eliminar luego hacer un try que pruebe si es posible eliminar dicho elemento. aqui un ejemplo:
+
+```
+System.out.println("""  
+        Seleccione una opcion:            1. eliminar los siguientes elementos en la cola.            2. eliminar por contenido.        """);  
+int opcionEliminar = sc.nextInt();  
+  
+if (opcionEliminar == 1){  
+    System.out.println("Ingrese el nuemro de elementos que desea eliminar: ");  
+    int cuantosEliminar = sc.nextInt();  
+    for (int i = 0; i < cuantosEliminar; i++) {  
+        cola.remove();  
+    }  
+    System.out.println("Elementos eliminados!, Cola: " + cola );  
+} else if (opcionEliminar == 2) {  
+    System.out.println("Cuantos elementos eliminara? ");  
+    int cuantosIndex = sc.nextInt();  
+    for (int i = 0; i < cuantosIndex; i++) {  
+        System.out.println("ingrese el contenido del elemento " + i +" a eliminar: ");  
+        String deleteElemento = sc.next();  
+        try {  
+            cola.remove(deleteElemento);  
+        }catch (Exception e) {  
+            System.out.println("No se encontro el elemento a eliminar: " + deleteElemento + "\n" + e.getMessage());  
+        }  
+    }  
+    System.out.println("Elementos eliminados, Cola: " + cola);  
+}
+```
+
+
+
 #### 17.  Explique textual y gráficamente cual es el algoritmo o proceso para borrar todos los elementos de una Cola, es decir, vaciar una Cola. Hacer un ejemplo en Java.
+
+para vaciar nuestra cola haremos uso de la clase Iterator para poder iterar sobre nuestra cola para luego hacer un while que mientras que la cola contenga algun elemento haremos un cola.remove(); para vaciar nuestra cola. como vemos en este ejemplo:
+
+```
+System.out.println("Borrando ....");  
+Iterator<String> itr = cola.iterator();  
+  
+while (itr.hasNext())  
+{  
+    cola.remove();  
+    System.out.println("Borrando");  
+}  
+System.out.println("Todos los elementos han sido eliminados!, elementos: " + cola.size());  
+System.out.println(cola);
+```
 
 
 
@@ -258,7 +306,9 @@ pila.push(10);
 
     
 8.  Explique textual y gráficamente cual es el algoritmo o proceso para insertar un elemento a una Pila. Hacer un ejemplo en Java
-    
+
+
+
 9.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar el primer elemento de una pila. Hacer un ejemplo en Java:
 
 para esta ocacion vamos a hacer uso de los indices de nuestra pila y que queremos eliminar el primer elemento de esta por lo que, lo primero que vamos a hacer es comprobar que la pila esta vacia ya que de lo contrario esta nos generaria un error devido a que no tiene elementos que eliminar lo cuan se podriva evitar con una excepcion on en java un try. luego de comprobar que nuestra pila no esta vacia vamos a eliminar el primer elemento de esta que siempre seria el elemento con index #0 y para eso hacemos uso las herramientas de la clase Stacks que en este caso para eliminar un elemento seria el metodo .remove(); al cual le pasamos el indice de nuestro elemento, luego lo eliminamos y se lo mostramos al usuario de una manera sensilla. como podemos ver en este ejemplo:
@@ -283,13 +333,146 @@ System.out.println(pila.pop());
 ```
     
 11.  Explique textual y gráficamente cual es el algoritmo o proceso para buscar un elemento de una pila. Hacer un ejemplo en Java
+
+para buscar un elemento en la pila lo primero que debemos hacer es obtener el elemento que vamos a buscar para esto hacemos uso del objeto scaner o sc que creamos al principio de nuestro codigo, una vez tenemos el objeto a buscar lo siguiente es determinar si se trata de un entero o una cadena de texto, para eso hacememos un condicional que nos divida el flujo del algoritmo en dos, ahora bien para comprobar si el elemento a buscar esta en la pila hacemos uso de el metodo .contains() que comprueba si el elemento que le pasamos es esta en la linked list, de manera que devuelve true o false dependiendo si lo encontro: aqui tenemos un ejemplo:
+
+```
+System.out.println("Dijite su elemento a buscar: ");  
+BusquedaString = sc.next();  
+System.out.println("El elemento ingresado es numero ( y / n ): ");  
+String str = sc.next();  
+if (Objects.equals(str, "y")) {  
+    int entero = Integer.parseInt(String.valueOf(BusquedaString));  
+  
+    if (pila.contains(entero)) {  
+        System.out.println("Se encontro el elemento " + entero + " en la pila!");  
+    }else {  
+        System.out.println("No se encontro el elemento " + entero + " en la pila!");  
+    }  
+}else if (Objects.equals(str, "n")){  
+    if (pila.contains(BusquedaString)) {  
+        System.out.println("Se encontro el elemento: " + BusquedaString + " en la Pila!");  
+    }else {  
+        System.out.println("No! Se encontro el elemento: " + BusquedaString + " en la Pila.");  
+    }}
+```
+
     
-12.  Explique textual y gráficamente cual es el algoritmo o proceso para agregar varios elementos consecutivos o secuenciales en cualquier posición de la Pila. Hacer un ejemplo en Java
+12.  Explique textual y gráficamente cual es el algoritmo o proceso para agregar varios elementos consecutivos o secuenciales en cualquier posición de la Pila. Hacer un ejemplo en Java:
+
+para este algoritmo lo primero es determinar cuantos elementos vamos a agregar a nuestra pila para eso le preguntamos a nuestro usuario por medio de la clase scaner y guardamos el numero de elemento que este determino de manera que hagamos un ciclo for que se ejecute el numero de veces que nuestro usuario determina: para agregar varios elemento creamos una nueva pila momentanea y en cada ciclo de nuestro for le preguntamos a nuestro usuario que va a añadir y añadirlo a nuestra pila temporal, luego de esto añadimos la pila temporal a la momentanea por medio del metodo addAll(); luego limpiamos la pila temporal para que la proxima ves que querramos añadir algo no esten los demas elementos. aqui un pequeño ejemplo de lo hablado:
+
+```
+System.out.println("Cuanto elementos va a agregar (ingresar cantidad en nuemeros): ");  
+int cantidad = sc.nextInt();  
+Stack<String> pilaadd = new Stack<>();  
+for (int i = 0; i < cantidad; i++){  
+    System.out.println("ingrese ele lemento #" + i);  
+    pilaadd.push(sc.next());  
+}  
+System.out.println("agregando los elementos ...");  
+try {  
+    pila.addAll(pilaadd);  
+}catch (Exception e){  
+    System.out.println("no Se pudo agregar " + e);  
+}
+```
     
-13.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar varios elementos consecutivos o secuenciales en cualquier posición de la Pila. Hacer un ejemplo en Java
+13.  Explique textual y gráficamente cual es el algoritmo o proceso para eliminar varios elementos consecutivos o secuenciales en cualquier posición de la Pila. Hacer un ejemplo en Java:
+
+
+para punto hemos dessarrollado tres maneras de eliminar elementos de forma consecutiva deferentes elementos dentro de nuestra pila. la primera forma es mediante el metodo pop de nuestra clase Stack como ya sabemos este metodo nos prermite sacar el ultimo elemento en nuestra pila como en un principio esta esta pensada que funcione, para esto llamos al metodo scaner para perguntarle al usuario cuantos elementos desea sacar de la pila, para luego con ese dato hacer un for que se ejecute el numero de veses establesidas. la siguente manera que de desarrollamos fue la de eliminar desde un indice hasta otro, para esta parte desarrollamos un algorimo que primero pregunta desde que elemento a que elemento va a eliminar de manera que hacemos un for que valla preguntando cuales son los indices a eliminar. luego la tercera manera es la de eliminar por contenido. para esta parte creamos un array donde nuestro algoritmo le pregunta al usuario que ingrese el contenido de los elementos que desea eliminar. para siguente en base a ese array hacer un for que en base a cada elemento del array compare si este elemento se encuentra dentro de nuestra pila y si se encuentra eliminarlo, pero en caso de que no este mostrara un mensaje de error indicando que no se pudo eliminar: aqui el algoritmo desarrollado: 
+
+```
+System.out.println("""  
+        Seleccione una opcion:            1. (pop) eleminar varios elementos al final de la pila.            2. eliminar varios indices de la pila.            3. eliminar por contenido.        """);  
+int opcionBorrar = sc.nextInt();  
+  
+if (opcionBorrar == 1) {  
+    System.out.println("cuantos Pop de la pila desea realizar: ");  
+    int pops = sc.nextInt();  
+    for (int i = 0; i < pops; i++) {  
+        pila.pop();  
+    }}else if (opcionBorrar == 2) {  
+    System.out.println("Cuantos elementos va a eliminar: ");  
+    int cuantos = sc.nextInt();  
+    for (int i = 0; i < cuantos; i++) {  
+        try {  
+            System.out.println("Ingrese el elemento # " + i + " a eliminar:");  
+            int eliminar = sc.nextInt();  
+            pila.remove(eliminar);  
+            if (pila.contains(eliminar)) {  
+                System.out.println("No se elimino el elemento deseado!");  
+            }else {  
+                System.out.println("se elemento el elemento deseado!");  
+            }            eliminar = 0;  
+        }catch (Exception e) {  
+            System.out.println("no se elimino el elemento deseado Error: " + e.getMessage());  
+        }    }    System.out.println("Elementos eliminados: " + cuantos);  
+    System.out.println("Estado De la pila: " + pila);  
+} else if (opcionBorrar == 3) {  
+    System.out.println("Cuandos elementos eliminara: ");  
+    int cuantos = sc.nextInt();  
+    String [] elementos = new String[cuantos];  
+  
+    for (int i = 0; i < cuantos; i++) {  
+        System.out.println("ingrese el contenido del elemento a eliminar:");  
+        elementos[i] = sc.next();  
+    }    System.out.println(Arrays.toString(elementos));  
+  
+    try {  
+        for (int i = 0; i < elementos.length; i++) {  
+            if (pila.contains(elementos[i])) {  
+                pila.remove(elementos[i]);  
+            }        }    }catch (Exception e) {  
+        System.out.println("Error: " + e.getMessage());  
+    }    System.out.println("elementos: " + Arrays.toString(elementos) + " eliminados correctamente.");  
+}
+```
+
     
 14.  Explique textual y gráficamente cual es el algoritmo o proceso para obtener la posición de un elemento  de la Pila. Hacer un ejemplo en Java
+
+para esta parde el algorimo le preguntamos al usuario cual es el elemento que va buscar para hacer un for que recorra la pila buscando dicho elemento, y si lo encuentra nos devuelve el indice de dicho elemento, y en caso de que no nos devuelve un mensaje indicando que no pudo ser encontrado.
+
+```
+boolean found = false;  
+System.out.println("ingrese el contenido del elemento a buscar su posicion: ");  
+String busquedaE = sc.next();  
+for (int i = 0; i < pila.size(); i++) {  
+    if (pila.get(i).equals(busquedaE)) {  
+        System.out.println("el elemento " + busquedaE + " se encontro ne la posicion " + i);  
+        found = true;  
+    }else if (!found) {  
+        System.out.println("No se encontro el elemento " + busquedaE);  
+    }
+```
+
     
 15.  Explique textual y gráficamente cual es el algoritmo o proceso para obtener un elemento a partir de una posición específica de la Pila. Hacer un ejemplo en Java
+
+
+para poder encontrar el contenido en un indice espesifico primero debermos solicitar el indice al usuario luego de eso gracias a el metodo que nos ofrece la clase Stack. pila.elementAt(index); podemos obtener el dato que estamos buscando, de  asi como se muestra en el siguente ejemplo:
+
+```
+System.out.println("Ingrese el Indice del elemento a buscar:");  
+int index = sc.nextInt();  
+  
+try {  
+    System.out.println("Elemento en el indice " + index + " es: " + pila.elementAt(index));  
+}catch (Exception e) {  
+    System.out.println(Arrays.toString(new String[]{"No se encontro el elemento en el indice: error: " + e.getMessage()}));  
+}
+```
     
 16.  Explique textual y gráficamente cual es el algoritmo o proceso para Eliminar todos los elementos (vaciar) de una Pila. Hacer un ejemplo en Java
+
+para eliminar todos los elemento primero hay que guardar el tamaño inicial de la pila ya que para que cuando hagamos el ciclo for los elementos no se eliminaran del todo ya que el tamaño de la pila cambio mietras el for se ejecutava. ahora bien en el ciclo for se ejecuta el dependiendo el tamaño de nuestra pila eleiminado simpre el elemento del indice 0. como podemos ver en este ejemplo: 
+
+```
+int tamagno = pila.size();  
+for (int i = 0; i < tamagno; i++) {  
+    pila.remove(0);  
+}  
+System.out.println(pila);
+```
