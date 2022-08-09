@@ -51,3 +51,68 @@ salida:
 
 `Hola Sin Nombre`
 
+**RESUMEN**:
+
+---
+
+**Desarrollo**  
+**Nodemon.** Demons en linux, puedes tener procesos que ves ejecutandose  
+nodemon + archivo al que quiero acceder detecta cambios, y ejecuta automaticamente el código.
+
+sudo npm install -g nodemon
+
+-   [Nodemon](https://nodemon.io/)
+
+**Producción**
+
+sudo npm install -g pm2
+
+**PM2** Es un demonio administrador de procesos que me puede ayudar a administrar y mantener mi aplicación 24/7.
+
+-   Voy a poner monitorizar el código para saber si algo se rompe.
+-   Me permite ver dashboards de mi código, puedo ver que está corriendo.
+-   Puedo ver el rendimiento de mi cpu
+-   Con: pm2 stop + id —> me detiene el proceso que está en ejecución con ese ID.
+
+
+
+# callbacks:
+**Funciones Callback**  
+Una funcion callback es una funcion que es pasada como argumento a otra funcion, para ser llamada(`called back`) en otro momento.  
+La funcion que recibe como argumento otras funciones es denominada funcion de orden superior (higher-order function), esta contiene la logica correspondiente para ejecutar adecuadamente la funcion callback.
+
+En el siguiente codigo
+
+```javascript
+setTimeout(console.log('Hello'), 1000)
+```
+
+`setTimeout` es una higher-order function y `console.log` es una callback function
+
+ejemplo:
+```JavaScript
+function hola(nombre, miCallback) {
+
+console.log("no soy asincrono");
+
+setTimeout(function() {
+
+console.log("hola " + nombre);
+
+miCallback();
+
+},1000)
+
+}
+
+  
+
+hola('Nicolas',function () {
+
+console.log("Proceso Terminado");
+
+});
+```
+
+  ## callbacks Hell !!!!
+  
