@@ -72,7 +72,7 @@ public class queuelist {
 
 hay muchas maneras de hacer lo pero una de las mas sensillas es utilizando el metodo .size, este nos devuelve el numero de elementos que tengamos dentro de nuestra cola. por lo que haciendo una comparacion booleana en un if podemos determinar si este se encuentra vacio o no: como podemos ver en el siguente ejemplo:
 
-```
+```Java
 if (cola.size() == 0) {  
     System.out.println("La cola esta vacia");  
 } else {  
@@ -336,7 +336,7 @@ System.out.println(pila.pop());
 
 para buscar un elemento en la pila lo primero que debemos hacer es obtener el elemento que vamos a buscar para esto hacemos uso del objeto scaner o sc que creamos al principio de nuestro codigo, una vez tenemos el objeto a buscar lo siguiente es determinar si se trata de un entero o una cadena de texto, para eso hacememos un condicional que nos divida el flujo del algoritmo en dos, ahora bien para comprobar si el elemento a buscar esta en la pila hacemos uso de el metodo .contains() que comprueba si el elemento que le pasamos es esta en la linked list, de manera que devuelve true o false dependiendo si lo encontro: aqui tenemos un ejemplo:
 
-```
+```Java
 System.out.println("Dijite su elemento a buscar: ");  
 BusquedaString = sc.next();  
 System.out.println("El elemento ingresado es numero ( y / n ): ");  
