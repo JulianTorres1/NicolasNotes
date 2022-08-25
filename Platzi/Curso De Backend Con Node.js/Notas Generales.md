@@ -246,3 +246,11 @@ Passport es un _middleware_ que nos permite establecer diferentes estrategias de
 - Seguridad(Helmet)
 - Testing
 
+---
+
+## Manejando un pool de conexiones:
+
+
+
+
+
