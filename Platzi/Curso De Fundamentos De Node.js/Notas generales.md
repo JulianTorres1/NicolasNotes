@@ -37,7 +37,7 @@ console.log("Hola " + nombre);
 
 ejecucion pasando parametros:
 
-`` $ NOMBRE=Nicolas node Variables-De-Entorno.js  
+`` $ NOMBRE=Nicolas node Variables-De-Entorno.js `` 
 
 salida:
 

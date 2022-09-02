@@ -251,6 +251,42 @@ Passport es un _middleware_ que nos permite establecer diferentes estrategias de
 ## Manejando un pool de conexiones:
 
 
+las conexiones a la base de datos las estamos haciendo con una libreria de node: node-posgres ya que la base de datos que estamos empleando es una de posgres con docker lo cual facilita su uso y escalabildad.
+
+### Poll de conexiones:
+para hacer una conexion con nuestra base de datos nuestra api estaba creando una instancia nueva de esta cada ves que le haciamos una peticion, de tal manera que no es lo suficientemente eficiente de manera que vamos a general un pool de conexiones que es: Un pool de conexiones es un conjunto limitado de conexiones a una base de datos, que es manejado por un servidor de aplicaciones de forma tal, que dichas conexiones pueden ser reutilizadas por los diferentes usuarios.
+
+![[Pasted image 20220827083453.png]]
+
+## variables de ambiente:
+
+hasta este momento hemos estado comentiendo una mala practica, estamos situando los datos de conexion a la base de datos directamente en el codigo de la mima api, la manera en la que se debaria realizar es pasarle a la api las variables de entorno requeridas para realizar la conexion y de esta manera no llevar las llaves de conexion a cualquier lugar donde clonemos nuestro repositorio.
 
 
+### Que es un ORM?
+
+> 💡Un ORM es un modelo de programación que permite mapear las estructuras de una base de datos relacionales.
+
+.  
+Al abstraer este tipo de programación, delegamos su implementación al backend, es decir, le añadimos una de responsabilidad a la capa transaccional del servidor:  
+.  
+✨Los beneficios son los siguientes:
+
+-   Acciones como **_CRUD_** (Create, Read, Update, Delete) son administradas mediante ORM.
+-   La implementación de **_seeds_** o semillas, nos permiten recuperar, mediante código, la estructura de una BD.
+
+.  
+Una de las bases teóricas para entender este modelo es mediante el conocimiento de **_DAO_** (Data Access Object) y **_DTO_** (Data Transfer Object), los cuales nos permiten desestructurar un ORM en módulos de abstracción para acceder a la DB y transferir datos desde la misma DB, respectivamente hablando.  
+.  
+🙃Los contras sería:
+
+-   Delegación de responsabilidades al server
+-   Descentralización de trabajo, directa, de una BD.
+
+
+# Modelos
+
+
+# Manejando el CRUD;
+### Crear, actualizar y eliminar:
 
