@@ -9,3 +9,8 @@ el DOM es:
 
 ![[Pasted image 20220909163302.png]] 
 
+### Como leer un [[Nodos]] en el DOM
+
+[[NodeList vs Array]]
+
+[[Atributos y propiedades del DOM]]
