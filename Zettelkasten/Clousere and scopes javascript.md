@@ -13,3 +13,4 @@ el scope va a determinar la accesibilidad de las variables a diferentes partes d
 Variables:
 
 
+[[javascript]]

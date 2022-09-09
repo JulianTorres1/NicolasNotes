@@ -1,0 +1,1 @@
+Autentificación es el acto de probar la identidad de un usuario del sistema informático (por ejemplo, comparando la contraseña introducida con la contraseña almacenada en la base de datos). **Autorización** es la función de especificar los derechos o privilegios de acceso a los recursos.

@@ -1,7 +1,10 @@
 # Que es Node.js
 
 nodejs es simplemente un entorno de ejecucion de JavaScrip fuera del navegador. nos sirve para llevar js a diferentes implementaciones, como utilizar js como el lenguaje de nuestro Backend,api's, apps de escritorio, etc.
-
+nodejs es una forma de ejecutar javascript fuera del navegador de manera que podamos utilizar este mismo para constuir:
+- apis
+- aplicaciones de escritorio
+- apicaciones reactivas con [[react]]
 Caracteristicas:
  - es concurrente.
  - motor V8. es un entorno de ejecucion creado por google, que basicamente conviente nuestro codigo de js a codigo maquina, de manera que es increiblemente rapido.
