@@ -1,0 +1,1 @@
+La escalabilidad es la capacidad de ampliación de un sistema para satisfacer las necesidades empresariales. Para escalar un sistema, debe agregar hardware adicional o actualizar el hardware existente sin modificar mucho la aplicación.

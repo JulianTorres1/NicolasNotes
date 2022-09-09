@@ -1,0 +1,1 @@
+CSSOM es un **conjunto de APIs que permite manipular CSS desde JavaScript**. Permite leer y modificar el estilo de CSS de forma dinámica. Dándole estilos y estética al contenido hecho en el DOM.

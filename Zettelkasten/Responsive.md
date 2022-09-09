@@ -1,0 +1,1 @@
+Responsive, es decir, deben ser _resilientes_ (siempre sabe qué hacer) y _escalables_ (no importa con cuánta información debemos trabajar o cuántos usuarios entran a la aplicación, la aplicación debe poder seguir funcionando sin problemas).
