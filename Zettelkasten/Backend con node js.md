@@ -54,5 +54,8 @@ para eso debemos crear un router en este caso app.get(); envia el contenido a nu
 
 [[Migraciones]]
 
+[[Empaquetadores]]
 
- 
+[[Compiladores o Trasnpiladores]]
+
+[[Consulta de Datos]]

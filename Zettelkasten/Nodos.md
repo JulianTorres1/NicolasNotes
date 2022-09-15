@@ -14,3 +14,5 @@ Básicamente tenemos 4 formas de leer nodos con JS:
     ejemplo = **const button = document.querySelector(’#button)**
 
 [[Crear y agregar nodos]]
+
+[[Eliminar Nodos]]

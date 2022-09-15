@@ -1,0 +1,1 @@
+**TypeScript** es usado **para** desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor, o extensiones **para** programas (Node. js y Deno). **TypeScript** extiende la sintaxis **de** JavaScript, por tanto cualquier código JavaScript existente debería funcionar sin problemas.

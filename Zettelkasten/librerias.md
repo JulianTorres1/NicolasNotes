@@ -1,0 +1,1 @@
+En este sentido, una librería es un **conjunto de archivos que se utiliza para desarrollar software**. Suele estar compuesta de código y datos, y su fin es ser utilizada por otros programas de forma totalmente autónoma. Simple y llanamente, es un archivo importable.

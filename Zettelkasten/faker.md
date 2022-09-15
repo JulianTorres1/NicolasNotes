@@ -1,0 +1,1 @@
+es una libreria de jsvascript para generar contenido flaso pero creible 

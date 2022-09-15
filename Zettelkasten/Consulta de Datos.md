@@ -1,0 +1,1 @@
+herramientas como [[Rest:API]] o [[GraphQL]] son una formas o protocolos que tenemos de counicarnos con el backend para obtener informacion de este mismo
