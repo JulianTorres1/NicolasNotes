@@ -1,0 +1,2 @@
+La diferencias entre estos tres conseptos es que mientras que la mecanica es la rama de la fisica que se centra en estudiar el movimientos de los cuerpos gracias a la Cinematica y la Dinamica. de manera que estas dos conforman la mecanica.
+pero ahora cual es la diferencia entre estas dos. la cinematica se centra en estudiar el movimiento de los cuerpos sin preocuparse de que produjo el movimiento en si, mientras que la dinamica se centra en las causas que provocaron el movimiento en un principio.
