@@ -2,8 +2,6 @@
 
 Primero que todo el mapa general de la asigniatura con las cosas que debo saber al terminar cada unidad:
 
-![[Pasted image 20220421143654.png]]
-
 ## Unidad # 1
 #### Objetivos:
  - diferenciar las estructuras de datos mas utilizadas.
