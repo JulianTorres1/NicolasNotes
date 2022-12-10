@@ -29,3 +29,4 @@ estas se originaron como una forma de almacenar los datos de los programa de los
 ### Representaciones:
 
 [[Diagramas Entidad Relacion]]
+[[Modelo Relacional]]

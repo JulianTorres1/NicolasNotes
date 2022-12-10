@@ -1,0 +1,1 @@
+Pues basicamente la fuerza es una fuerza es una magnitud vectorial que mide la intensidad del intercambio de momento lineal entre dos cuerpos. Gracias a la fuerza exiten las [[Leyes de Newton]].

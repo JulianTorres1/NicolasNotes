@@ -1,0 +1,1 @@
+la masa es para un consepto simple es algo que ocupa materia en el espacio y esta se  mide en gramos o en kilos. pero el pero es la masa por la gravedad o M * g.
